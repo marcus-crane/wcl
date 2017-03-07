@@ -10,6 +10,7 @@ describe('viewAccount()', function() {
             return viewAccount('summary')
             .then((account) => {
                 expect(account).to.be.an('object')
+                expect(account).to.not.be.empty
             })
             .catch((err) => {
                 console.log(err)

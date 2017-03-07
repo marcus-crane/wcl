@@ -13,6 +13,7 @@ describe('login functions', function() {
         })
         .then((account) => {
             expect(account).to.be.an('object')
+            expect(account).to.not.be.empty
             expect(account.fees).to.contain('$')
         })
         .catch((err) => {
