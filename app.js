@@ -1,5 +1,9 @@
 const axios = require('axios')
 const env = require('dotenv').config()
+const viewAccount = require('./lib/viewAccount')
 
-console.log(process.env.WCL_LAST_NAME)
-
+viewAccount()
+.then((account) => {
+    console.log(account.loans)
+    console.log(account.fees)
+})
