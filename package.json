@@ -12,8 +12,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "cheerio": "^0.22.0",
-    "dotenv": "^4.0.0",
-    "node-axios-cookiejar": "0.0.3"
+    "dotenv": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
