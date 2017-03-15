@@ -13,6 +13,7 @@
 
 const axios = require('axios')
 const cheerio = require('cheerio')
+const fs = require('fs')
 
 axios.get('http://www.wcl.govt.nz/carlweb/jsp/pipcharges.jsp', {
     headers: {
@@ -22,9 +23,25 @@ axios.get('http://www.wcl.govt.nz/carlweb/jsp/pipcharges.jsp', {
 .then((res) => {
     let $ = cheerio.load(res.data, { xmlMode: false })
     let unfilteredCharges = $('script').text()
-    let regex = /\s\[([^]+)\s]/gm
+    let loansRegex = /\s\[([^]+)\s]/gm
+    let itemsRegex = /{([\s\S]+?)}/gm
+    let keysRegex = /\w+(?=:)/g
     //console.log(res)
-    let charges = unfilteredCharges.match(regex)[0]
+    let chargesArray = unfilteredCharges.match(loansRegex)[0]
+    let chargesObjects = chargesArray.match(itemsRegex)
+
+    for (let i = 0; i < chargesObjects.length; i++) {
+        chargesObjects[i] = chargesObjects[i].replace(keysRegex, function(match) {
+            if (match !== 'http') {
+                return `"${match}"`
+            } else {
+                return match
+            }
+        })
+    }
+
+    let books = JSON.parse('[' + chargesObjects + ']')
+    console.log(books[0].author)
 })
 .catch((err) => {
     console.log(err)
