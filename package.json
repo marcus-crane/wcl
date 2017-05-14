@@ -10,13 +10,11 @@
   "author": "Marcus Crane <marcus@thingsima.de>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.15.3",
-    "cheerio": "^0.22.0",
-    "dotenv": "^4.0.0",
-    "he": "^1.1.1"
+    "axios": "^0.16.1",
+    "dotenv": "^4.0.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.3.0"
   }
 }
