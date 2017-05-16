@@ -16,5 +16,8 @@ switch(process.argv[2]) {
 
   default:
     console.log('Please enter a valid option')
+    console.log('Options are: summary, fines or loans')
+    console.log('Run your choice after the program like so:')
+    console.log('node app summary')
     break
 }
