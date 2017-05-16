@@ -10,6 +10,10 @@ switch(process.argv[2]) {
     fetch.fines()
     break
 
+  case 'loans':
+    fetch.loans()
+    break
+
   default:
     console.log('Please enter a valid option')
     break
