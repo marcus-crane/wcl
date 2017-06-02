@@ -14,9 +14,13 @@ switch(process.argv[2]) {
     fetch.loans()
     break
 
+  case 'holds':
+    fetch.holds()
+    break
+
   default:
     console.log('Please enter a valid option')
-    console.log('Options are: summary, fines or loans')
+    console.log('Options are: summary, fines, holds or loans')
     console.log('Run your choice after the program like so:')
     console.log('node app summary')
     break
