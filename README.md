@@ -21,3 +21,9 @@ It works™ but it's not perfect. I had a quick look at reverse engineering what
 Similarly, I decompiled the WCL Android app and the URLs are comprised of about 20 or 30 different segments which are all fairly obscured so yeah, one day I'll make something out of this if I can figure out a nice solution.
 
 Also, fetching charges (checked out books) sometimes errors out with a status 500 for no great reason so that's a thing too.
+
+# What's the next step?
+
+You could probably cleanup some bits and add cookiejar support. Axios has an unofficial helper library [here](https://github.com/3846masa/axios-cookiejar-support).
+
+This project has been pretty tiring and I'm ready to just put it on hold indefinitely. I learnt a bunch about JSDOM and cookies so that's cool but I'm probably way out of my depth to be honest. You're welcome to pair on it or submit PRs though.
