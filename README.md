@@ -26,4 +26,4 @@ Also, fetching charges (checked out books) sometimes errors out with a status 50
 
 You could probably cleanup some bits and add cookiejar support. Axios has an unofficial helper library [here](https://github.com/3846masa/axios-cookiejar-support).
 
-This project has been pretty tiring and I'm ready to just put it on hold indefinitely. I learnt a bunch about JSDOM and cookies so that's cool but I'm probably way out of my depth to be honest. You're welcome to pair on it or submit PRs though.
+This project has been pretty tiring and I'm ready to just put it on hold indefinitely. I learnt a bunch about JSDOM and cookies so that's cool but I'm probably way out of my depth to be honest. You're welcome to pair on it or submit PRs though. Let me know and I'll write up everything I know so far.
